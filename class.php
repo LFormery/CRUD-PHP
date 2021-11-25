@@ -4,10 +4,10 @@ class User{
     public $prenom;
     public $mail;
 
-    public function __construct($n, $p, $m) 
+    public function __construct($p, $n, $m) 
     {
-        $this->nom=$n;
         $this->prenom=$p;
+        $this->nom=$n;
         $this->mail=$m;
     }
     public function getNom()
