@@ -42,6 +42,9 @@
 
           </tbody>
         </table>
+        <a href="create.php">
+          <button type="button"  class="btn btn-primary">Ajouter un utilisateur</button>
+        </a>
       </section>
     </main>
     
