@@ -11,6 +11,3 @@ $_SESSION['users'] = [
   new User("Jean", "Reno", "reno@gmail.com"),
   new User("Adam", "Driver", "kylo@gmail.com"),
 ];
-
-
-?>
