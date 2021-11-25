@@ -4,11 +4,11 @@ class User{
     public $prenom;
     public $mail;
 
-    public function __construct($N, $P, $M) 
+    public function __construct($n, $p, $m) 
     {
-        $this->nom=$N;
-        $this->prenom=$P;
-        $this->mail=$M;
+        $this->nom=$n;
+        $this->prenom=$p;
+        $this->mail=$m;
     }
     public function getNom()
     {
