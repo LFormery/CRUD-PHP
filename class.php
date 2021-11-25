@@ -39,7 +39,3 @@ class User{
 $user1= new User ("Laetitia", "Pinto", "email@gmail.com");
 
 
-
-
-
-?>
