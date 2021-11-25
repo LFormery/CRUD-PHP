@@ -12,7 +12,23 @@
   <main class="container">
     <section class="row">
       <h1 class="my-5">Ajouter un utlisateur</h1>
-      <form action=""></form>
+      <form action="recup.php" method="POST" >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nom</label>
+    <input type="text" name="user-name" class="form-control" id="InputNom" aria-describedby="emailHelp" placeholder="Entrer votre nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Prénom</label>
+    <input type="text" name="user-prenom" class="form-control" id="InputPrenom" aria-describedby="emailHelp" placeholder="Entrer votre Prénom">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="user-email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer votre email">
+  </div>
+  <br>
+  <button type="submit" name="valider" class="btn btn-primary">Ajouter</button>
+</form>
+     
     </section>
   </main>
 </body>
