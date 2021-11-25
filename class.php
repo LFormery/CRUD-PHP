@@ -4,7 +4,7 @@ class User{
     public $prenom;
     public $mail;
 
-    public function __constructor($N, $P, $M) 
+    public function __construct($N, $P, $M) 
     {
         $this->nom=$N;
         $this->prenom=$P;

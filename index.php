@@ -1,3 +1,4 @@
+<?php require 'session.php'?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,18 +21,14 @@
             <th>Actions</th>
           </thead>
           <tbody>
+          <?php foreach ($_SESSION['users'] as $user) {?>
             <tr class="table-active">
-              ...
+              <td><?=$user->getNom()?></td>
+              <td><?=$user->getPrenom()?></td>
+              <td><?=$user->getMail()?></td>
             </tr>
-            <tr>
-              ...
-            </tr>
-            <?php ?>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2" class="table-active">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+          <?php }?>
+
           </tbody>
         </table>
     </section>
