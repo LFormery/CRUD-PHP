@@ -1,3 +1,5 @@
+<?php require 'session.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,22 @@
   <main class="container">
     <section class="row">
       <h1 class="my-5">Modifier un utilisateur</h1>
+      <form>
+      <div class="mb-3">
+          <label for="inputPrenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="inputPrenom" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="inputNom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="inputNom" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="">
+        </div>
+        <a href="index.php" class="btn btn-secondary">Annuler</a>
+        <button type="submit" class="btn btn-primary">Modifier</button>
+      </form>
     </section>
   </main>
 </body>

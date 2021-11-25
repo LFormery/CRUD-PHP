@@ -24,13 +24,13 @@
             <th>Actions</th>
           </thead>
           <tbody>
-          <?php foreach ($_SESSION['users'] as $user) {?>
+          <?php foreach ($_SESSION['users'] as $id=>$user) {?>
             <tr class="">
               <td><?=$user->getNom()?></td>
               <td><?=$user->getPrenom()?></td>
               <td><?=$user->getMail()?></td>
               <td>
-                <a href="update.php" class="mr-5 btn btn-primary">
+                <a href="update.php/id=<?=$id?>" class="mr-5 btn btn-primary">
                   <i class="fas fa-edit"></i>
                 </a>
                 <a href="delete.php" class="mr-5 btn btn-danger">
