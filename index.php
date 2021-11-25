@@ -30,12 +30,12 @@
               <td><?=$user->getPrenom()?></td>
               <td><?=$user->getMail()?></td>
               <td>
-                <button class="mr-5">
+                <a href="update.php" class="mr-5 btn btn-primary">
                   <i class="fas fa-edit"></i>
-                </button>
-                <button>
+                </a>
+                <a href="delete.php" class="mr-5 btn btn-danger">
                   <i class="fas fa-trash-alt"></i>
-                </button>
+                </a>
               </td>
             </tr>
           <?php }?>
