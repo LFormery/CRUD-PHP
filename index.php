@@ -24,7 +24,7 @@
             <th>Actions</th>
           </thead>
           <tbody>
-          <?php foreach ($_SESSION['users'] as $id=>$user) {?>
+          <?php foreach ($userList as $id=>$user) {?>
             <tr class="">
               <td><?=$user->getNom()?></td>
               <td><?=$user->getPrenom()?></td>

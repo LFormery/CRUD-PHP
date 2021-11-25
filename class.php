@@ -1,4 +1,5 @@
 <?php
+
 class User{
     public $nom;
     public $prenom;
@@ -36,6 +37,6 @@ class User{
     }
 
 }
-$user1= new User ("Laetitia", "Pinto", "email@gmail.com");
+
 
 

@@ -1,6 +1,30 @@
 <?php 
 require 'session.php';
+
+if(!isset($_GET['id'])) {
+  die("Pas d'utilisateur trouvé");
+}
+
 $id = (int)$_GET['id'];
+
+if(!isset($userList[$id])) {
+  die("Pas d'utilisateur trouvé");
+}
+
+$modifyUser = $userList[$id];
+
+if($_POST != []) {
+  $user = $userList[$id];
+  $user->setPrenom($_POST['inputPrenom']);
+  $user->setNom($_POST['inputNom']);
+  $user->setMail($_POST['inputMail']);
+  $_SESSION['users'] = serialize($userList);
+
+  header("Location: index.php");
+}
+
+
+
 
 ?>
 
@@ -18,18 +42,18 @@ $id = (int)$_GET['id'];
   <main class="container">
     <section class="row">
       <h1 class="my-5">Modifier un utilisateur</h1>
-      <form action="update.php" method="post">
+      <form action="update.php?id=<?=$id?>" method="post">
       <div class="mb-3">
           <label for="inputPrenom" class="form-label">Prénom</label>
-          <input type="text" class="form-control" id="inputPrenom" value="<?=$_SESSION['users'][$id]->getPrenom()?>">
+          <input type="text" class="form-control" name="inputPrenom" value="<?=$modifyUser->getPrenom()?>">
         </div>
         <div class="mb-3">
           <label for="inputNom" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="inputNom" value="<?=$_SESSION['users'][$id]->getNom()?>">
+          <input type="text" class="form-control" name="inputNom" value="<?=$modifyUser->getNom()?>">
         </div>
         <div class="mb-3">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" value="<?=$_SESSION['users'][$id]->getMail()?>">
+          <label for="inputMail" class="form-label">Email</label>
+          <input type="email" class="form-control" name="inputMail" value="<?=$modifyUser->getMail()?>">
         </div>
         <a href="index.php" class="btn btn-secondary">Annuler</a>
         <button type="submit" class="btn btn-primary">Modifier</button>
