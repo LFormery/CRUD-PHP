@@ -33,7 +33,7 @@
                 <a href="update.php?id=<?=$id?>" class="mr-5 btn btn-primary">
                   <i class="fas fa-edit"></i>
                 </a>
-                <a href="<?php session_destroy();?>" class="mr-5 btn btn-danger">
+                <a href="delete.php?id=<?=$id?>" class="mr-5 btn btn-danger">
                   <i class="fas fa-trash-alt"></i>
                 </a>
               </td>
