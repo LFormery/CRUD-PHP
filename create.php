@@ -23,7 +23,7 @@ if($_POST != []) {
 <body>
   <main class="container">
     <section class="row">
-      <h1 class="my-5">Ajouter un utlisateur</h1>
+      <h1 class="my-5">Ajouter un utilisateur</h1>
       <form action="create.php" method="POST" >
         <div class="form-group">
           <label for="inputNom">Nom</label>
