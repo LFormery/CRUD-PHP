@@ -1,3 +1,15 @@
+<?php 
+require 'session.php';
+
+if($_POST != []) {
+  $user = new User($_POST['user-prenom'],$_POST['user-name'],$_POST['user-email']);
+  array_push($userList, $user);
+  $_SESSION['users'] = serialize($userList);
+
+  header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +24,22 @@
   <main class="container">
     <section class="row">
       <h1 class="my-5">Ajouter un utlisateur</h1>
-      <form action=""></form>
+      <form action="create.php" method="POST" >
+        <div class="form-group">
+          <label for="inputNom">Nom</label>
+          <input type="text" name="user-name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="inputPrenom">Prénom</label>
+          <input type="text" name="user-prenom" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" name="user-email" class="form-control">
+        </div>
+        <br>
+        <button type="submit" name="valider" class="btn btn-primary">Ajouter</button>
+      </form>
     </section>
   </main>
 </body>
