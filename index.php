@@ -42,9 +42,19 @@
 
           </tbody>
         </table>
+        <div id="col-top" class="col-md-6">
         <a href="create.php">
           <button type="button"  class="btn btn-primary">Ajouter un utilisateur</button>
         </a>
+          </div>
+        <div id="col-top" class="col-md-6">
+        <a href="sessionRestart.php">
+          <button type="button" id="restart"  class="btn btn-primary">Recharger la session</button>
+        </a>
+        </div>
+
+         
+          
       </section>
     </main>
     
